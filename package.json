@@ -1,0 +1,12 @@
+{
+  "name": "Artists-Theme-CSS-Deployment",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-file-append": "*",
+    "grunt-jekyll": "*"
+  }
+}
