@@ -1,0 +1,178 @@
+#-------------------------------
+# General Site Settings
+title: Artists Theme
+email: andre.romano272@hotmail.com
+description: Thinker // Designer // Youtuber
+
+
+# Layout settings
+
+animation: "bounceOut"
+
+# Images
+
+logo: "logo.svg"
+background-image: "hero-bg.jpg"
+avatar: "travitar.jpg"
+
+# Colors
+
+accent: "#c99065"
+accent-light: "#e1c184"
+bgcolor: "#e5eaee"
+
+documentBackgroundColor: "#fff"
+headlineColor: "#333"
+textColor: "#666"
+linkColor: "#c99065"
+selectionColor: "#ffff9e"
+
+#-------------------------------
+# SEO Optimization
+
+# NOTE: Providing SEO information will make this website more searchable on the internets.
+
+seo:
+  description: "Provide a description for your website to make it visible to search engines."
+  rel-author: "https://plus.google.com/u/0/+DevTipsForDesigners/"
+  rel-publisher: "https://plus.google.com/u/0/+DevTipsForDesigners/"
+
+
+#-------------------------------
+# Menu Section
+
+menu: 
+  - 
+    name: "About Me"
+    url: "#about-me"
+  - 
+    name: Work
+    url: "#work"
+  - 
+    name: Clients
+    url: "#clients"
+  - 
+    name: Contact
+    url: "#contact"
+
+
+#-------------------------------
+# About Section
+
+avatar: travitar.jpg
+blurb: "**Travis specializes in making things** for human people. Most of the things he makes are [digital interfaces](http://travisneilson.com),  but he also puts effort into crafting [next-level beats](http://soundcloud.com/travis-neilson)  and [YouTube videos](http://youtube.com/user/devtipsfordesigners) about making codes happen.\n"
+
+skills: 
+  - 
+    name: Communication
+    value: "9"
+  - 
+    name: Organization
+    value: "7"
+  - 
+    name: Learning
+    value: "10"
+  - 
+    name: Teaching
+    value: "6"
+  - 
+    name: Planning
+    value: "7"
+  - 
+    name: "Visual Design"
+    value: "5"
+  - 
+    name: "UX Design"
+    value: "8"
+  - 
+    name: Programming
+    value: "6"
+
+
+#-------------------------------
+# Work Section
+
+projects: 
+  - 
+    file: sections/work/proj-1.html
+    folder: proj-1
+    name: "TYPO International Design Talks"
+  - 
+    file: sections/work/proj-2.html
+    folder: proj-2
+    name: "City-IN website concept"
+  - 
+    file: sections/work/proj-3.html
+    folder: proj-3
+    name: "Crisp Icons"
+  - 
+    file: sections/work/proj-4.html
+    folder: proj-4
+    name: "Flat Mobile UI/UX Concept"
+  - 
+    file: sections/work/proj-5.html
+    folder: proj-5
+    name: "Fresh It Up"
+  - 
+    file: sections/work/proj-6.html
+    folder: proj-6
+    name: "Timeline Page"
+  - 
+    file: sections/work/proj-7.html
+    folder: proj-7
+    name: "Weather Dashboard"
+  - 
+    file: sections/work/proj-8.html
+    folder: proj-8
+    name: "Stripes & Co"
+
+#-------------------------------
+# Clients Section
+
+clients: 
+  - 
+    content: "> **Lorem ipsum dolor sit amet**, consectetur adipisicing elit.  At dicta asperiores veniam repellat unde debitis quisquam magnam,  magni ut, deleniti excepturi animi atque quidem facilis tenetur  quam voluptates amet laboriosam."
+    logo: assets/img/clients/logo1.png
+    name: "Scott Summers"
+    photo: assets/img/clients/face-aaroni.jpg
+    title: "Director of Design, Quebec Int."
+  - 
+    content: "> **Lorem ipsum dolor sit amet**, consectetur adipisicing elit.  At dicta asperiores veniam repellat unde debitis quisquam magnam,  magni ut, deleniti excepturi animi atque quidem facilis tenetur  quam voluptates amet laboriosam."
+    logo: assets/img/clients/logo2.png
+    name: LOREM
+    photo: assets/img/clients/face-atariboy.jpg
+    title: LOREM
+  - 
+    content: "> **Lorem ipsum dolor sit amet**, consectetur adipisicing elit.  At dicta asperiores veniam repellat unde debitis quisquam magnam,  magni ut, deleniti excepturi animi atque quidem facilis tenetur  quam voluptates amet laboriosam."
+    logo: assets/img/clients/logo3.png
+    name: LOREM
+    photo: assets/img/clients/face-jackiesaik.jpg
+    title: LOREM
+  - 
+    content: "> **Lorem ipsum dolor sit amet**, consectetur adipisicing elit.  At dicta asperiores veniam repellat unde debitis quisquam magnam,  magni ut, deleniti excepturi animi atque quidem facilis tenetur  quam voluptates amet laboriosam."
+    logo: assets/img/clients/logo4.png
+    name: LOREM
+    photo: assets/img/clients/face-teleject.jpg
+    title: LOREM
+
+
+#-------------------------------
+# Contact Section
+
+social:
+  -
+    icon: "twitter"
+    link: ""
+  -
+    icon: "dribbble"
+    link: ""
+  -
+    icon: "behance"
+    link: ""
+  -
+    icon: "youtube"
+    link: ""
+  -
+    icon: "soundcloud"
+    link: ""
+
