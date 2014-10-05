@@ -98,7 +98,66 @@ var clientStuff = function() {
 
 
 
+// var formPost = function() {
+//   $.ajax({
+//     url: "//forms.brace.io/{{ site.data.settings.email }}", 
+//     method: "POST",
+//     data: {
+//       name: $("#input-name").val(),
+//       reply: $("#input-email").val(),
+//       message: $("#input-message").val()
+//     },
+//     dataType: "json",
 
+//     error: function() {
+//       console.log("error yo!");
+//     },
+//     success: function() {
+//       alert("success yo!");
+//     },
+//     complete: function() {
+//       console.log("complete yo!");
+//     }
+//   });
+// };
 
+$("#input-submit").click(function() {
+  event.preventDefault();
+  if($("#input-email").validEmail()) {
+    $.ajax({
+      url: "//forms.brace.io/{{ site.data.settings.email }}", 
+      method: "POST",
+      data: {
+        name: $("#input-name").val(),
+        reply: $("#input-email").val(),
+        message: $("#input-message").val()
+      },
+      dataType: "json",
 
+      error: function() {
+        console.log("error yo!");
+      },
+      success: function() {
+        alert("success yo!");
+        console.log("success yo!");
+      },
+      complete: function() {
+        console.log("complete yo!");
+      }
+    });
+  } else {
+    alert("check your email bro!")
+  }
+});
+
+// $("#input-email").validEmail({
+//   on: "keyup",
+//   success: function() {
+//     console.log("true");
+
+//   },
+//   failure: function() {
+//     console.log("fail")
+//   }
+// });
 
