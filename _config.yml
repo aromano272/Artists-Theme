@@ -14,9 +14,5 @@ sass:
   style: :nested
 
 
-# GitHub Pages stuff
-
-baseurl: "Artists-Theme"
-
 # Excludes
 exclude: ['node_modules','Gruntfile.js','package.json']
