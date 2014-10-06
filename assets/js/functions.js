@@ -48,7 +48,7 @@ var workLoad = function() {
         newTitle = $this.find("strong").text(),
         newFolder = $this.data("folder"),
         spinner = "<div class='loader'>Loading...</div>",
-        newHTML = "/sections/work/" + newFolder;
+        newHTML = "sections/work/" + newFolder;
 
     $(".project-load").html(spinner).load(newHTML);
     $(".project-title").text(newTitle);
