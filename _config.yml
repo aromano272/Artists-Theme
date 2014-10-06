@@ -14,5 +14,9 @@ sass:
   style: :nested
 
 
+# GitHub Pages stuff
+
+baseurl: "aromano272"
+
 # Excludes
 exclude: ['node_modules','Gruntfile.js','package.json']
