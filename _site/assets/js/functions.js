@@ -92,72 +92,93 @@ var clientStuff = function() {
         $(".active-client").removeClass("active-client").prev().addClass("active-client");
       }
     }
-
   });
+};
+
+
+var submitForm = function() {
+  $.ajax({
+    url: "//forms.brace.io/andre.romano272@hotmail.com", 
+    method: "POST",
+    data: {
+      name: $("#input-name").val(),
+      reply: $("#input-email").val(),
+      message: $("#input-message").val()
+    },
+    dataType: "json",
+
+    success: function() {
+      // SUCCESS HANDLER
+      console.log("success yo!");
+      $("#contact-form").find("input, textarea").not("#input-submit").each(function() { 
+        $(this).val("").removeClass("form__input--success");
+      });
+    },
+    error: function() {
+      console.log("error yo!");
+    },
+    complete: function() {
+      console.log("complete yo!");
+    }
+  });
+};
+
+var validateForm = function() {
+  // set required fields
+  // iterates over all input and textarea, and add the objects with prop("required") to requiredFiels array.
+  var requiredFields = $("#contact-form").find("input, textarea").not("#input-submit").map(function() {
+    if($(this).prop("required")) { return this };
+  });
+  // resets any states
+  requiredFields.each(function() { $(this).removeClass("form__input--error") });
+
+  var allFieldsFilled = new Array();
+
+  for (var i = 0; i < requiredFields.length; i++) {
+    // validate required fields
+    // requiredField[i] now stands for the raw dom element, thats why we use .value instead of .val()
+    if(requiredFields[i].value == "") {
+      // $(requiredFields[i]) transform the DOM elements into jquery objects
+      $(requiredFields[i]).addClass("form__input--error");
+      allFieldsFilled.push(false);
+    } else {
+      allFieldsFilled.push(true);
+    }
+  };
+
+  // return true if email is not valid
+  if(!$("#input-email").validEmail()) {
+    $("#input-email").addClass("form__input--error");
+  }
+  
+  // validate email
+  // if all true than return true
+  if($.inArray("false", allFieldsFilled) > -1 || $("#input-email").validEmail()) {
+    requiredFields.each(function() { $(this).addClass("form__input--success") });
+    return true;
+  }
 }
 
-
-
-// var formPost = function() {
-//   $.ajax({
-//     url: "//forms.brace.io/{{ site.data.settings.email }}", 
-//     method: "POST",
-//     data: {
-//       name: $("#input-name").val(),
-//       reply: $("#input-email").val(),
-//       message: $("#input-message").val()
-//     },
-//     dataType: "json",
-
-//     error: function() {
-//       console.log("error yo!");
-//     },
-//     success: function() {
-//       alert("success yo!");
-//     },
-//     complete: function() {
-//       console.log("complete yo!");
-//     }
-//   });
-// };
-
-$("#input-submit").click(function() {
+$("#contact-form").submit(function(event) {
   event.preventDefault();
-  if($("#input-email").validEmail()) {
-    $.ajax({
-      url: "//forms.brace.io/{{ site.data.settings.email }}", 
-      method: "POST",
-      data: {
-        name: $("#input-name").val(),
-        reply: $("#input-email").val(),
-        message: $("#input-message").val()
-      },
-      dataType: "json",
-
-      error: function() {
-        console.log("error yo!");
-      },
-      success: function() {
-        alert("success yo!");
-        console.log("success yo!");
-      },
-      complete: function() {
-        console.log("complete yo!");
-      }
-    });
-  } else {
-    alert("check your email bro!")
+  if(validateForm() == true) {
+    submitForm();
   }
 });
 
-// $("#input-email").validEmail({
-//   on: "keyup",
-//   success: function() {
-//     console.log("true");
 
-//   },
-//   failure: function() {
-//     console.log("fail")
+// $("#contact-form").submit(function(event) {
+//   event.preventDefault();
+//   if($("#input-email").validEmail()) {
+//     // RUN POST
+//     submitForm();
+//   } else {
+//     alert("check your email bro!")
 //   }
 // });
+
+
+
+
+
 

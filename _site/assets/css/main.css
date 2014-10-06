@@ -587,6 +587,9 @@ fieldset {
   margin: 0;
   padding: 0; }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset; }
+
 h3, header nav a, header .kicker, footer .lockup .content-wrap a {
   font-size: 14px;
   font-weight: 700;
@@ -1252,3 +1255,9 @@ form {
     margin-bottom: 20px; }
     form label span {
       display: block; }
+
+.form__input--error {
+  border-color: red; }
+
+.form__input--success {
+  border-color: green; }
