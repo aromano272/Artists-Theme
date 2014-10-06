@@ -16,7 +16,7 @@ sass:
 
 # GitHub Pages stuff
 
-baseurl: "aromano272"
+baseurl: "Artists-Theme"
 
 # Excludes
 exclude: ['node_modules','Gruntfile.js','package.json']
